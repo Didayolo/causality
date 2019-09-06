@@ -1,0 +1,16 @@
+<p>You can download on the Files signet:<br />- The <strong>public data</strong> in AutoML format. <br />- The <strong>starting kit</strong>, containing a example notebook to open the files, run baseline models and save the <strong>submission files</strong>. You can also find example of submission files in the starting kit (with random solution).</p>
+<p>The data samples have 168 attributes describing the molecule. The target to be predicted is whether the molecule is biodegradable or not in experiments (coded as plus or minus 1).</p>
+<p>The data you are provided with consists of the following files:</p>
+<ul>
+<li>chems_feat.name: Name of the 168 attributes (features).</li>
+<li>chems_feat.type: Type of the features. It can be Binary, Categorical or Numerical.</li>
+<li>chems_label.name: Name of the label to be predicted (class).</li>
+<li>chems_train.data: Training data matrix (1018 lines x 168 columns)</li>
+<li>chems_train.solution: Training target values (1018 lines x 1 column)</li>
+<li>chems_test.data: Test data matrix (400 lines x 168 columns)</li>
+</ul>
+<p>The files</p>
+<pre>- classification.solution: Test target values (400 lines x 1 column)<br />- selection.solution: Solution on which variable are real and which are fake (168 lines x 1 column)</pre>
+<p>are omitted, this is what you have to predict.</p>
+<p>Your submission must be a .zip archive containing the following files:<br />- classification.csv, your predicted labels for test dataset. It should include plus or minus one values, one for each test sample, representing the class label predictions.<br />- selection.csv, representing the features you selected as real or fake.</p>
+<p>Zip it without directory structure and submit it to Submit/View results signet.</p>

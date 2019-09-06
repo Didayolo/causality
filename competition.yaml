@@ -1,0 +1,61 @@
+title: Lung Cancer Causality
+description: Toy data about lung cancer generated artificially by causal Bayesian networks with binary variables. These examples are completely made up and are used for illustration purpose only.
+start_date: 2019-09-05 00:00:00+00:00
+end_date: null
+competition_docker_image: ''
+image: logo.jpg
+has_registration: false
+force_submission_to_leaderboard: false
+disallow_leaderboard_modifying: true
+enable_detailed_results: false
+admin_names: pavao,guyon,bennek
+html:
+  data: data.html
+  evaluation: evaluation.html
+  get_starting_kit: get_starting_kit.html
+  overview: overview.html
+  terms: terms.html
+phases:
+  0:
+    auto_migration: false
+    color: blue
+    description: ''
+    is_scoring_only: true
+    label: Final
+    max_submissions: 100
+    max_submissions_per_day: 10
+    phasenumber: 1
+    public_data: public_data.zip
+    reference_data: reference_data.zip
+    scoring_program: scoring_program.zip
+    start_date: 2018-04-05 00:00:00+00:00
+    starting_kit: starting_kit.zip
+leaderboard:
+  columns:
+    auc_binary:
+      label: Classification (AUC ROC)
+      leaderboard: &id001
+        label: RESULTS
+        rank: 1
+      rank: 2
+      sort: desc
+    auc_binary_2:
+      label: Feature Selection (AUC ROC)
+      leaderboard: *id001
+      rank: 3
+      sort: desc
+    auc_binary_3:
+      label: Causal Selection (AUC ROC)
+      leaderboard: *id001
+      rank: 4
+      sort: desc
+    ave_score:
+      label: < Rank >
+      leaderboard: *id001
+      rank: 1
+      sort: asc
+      computed:
+        operation: Avg
+        fields: auc_binary, auc_binary_2, auc_binary_3
+  leaderboards:
+    RESULTS: *id001
