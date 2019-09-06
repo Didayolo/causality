@@ -112,7 +112,7 @@ if __name__ == "__main__":
             elif basename=='selection':
                 scoring_function, metric_name = scoring_function_2, metric_name_2
             elif basename=='causal':
-                scoring_function, metric_name = scoring_function_2, metric_name_2
+                scoring_function, metric_name = scoring_function_3, metric_name_3
             else:
                 raise Exception('Unknown solution file basename: {}'.format(basename))
 
