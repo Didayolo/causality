@@ -5,8 +5,8 @@ end_date: null
 competition_docker_image: ''
 image: logo.png
 has_registration: false
-force_submission_to_leaderboard: false
-disallow_leaderboard_modifying: true
+force_submission_to_leaderboard: true
+disallow_leaderboard_modifying: false
 enable_detailed_results: false
 admin_names: pavao,guyon,bennek
 html:
