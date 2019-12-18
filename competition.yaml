@@ -1,9 +1,9 @@
-title: Lung Cancer Causality
-description: Toy data about lung cancer generated artificially by causal Bayesian networks with binary variables. These examples are completely made up and are used for illustration purpose only.
+title: Heart Attack - Causality Challenge
+description: Synthetic data about heart attack generated artificially by causal Bayesian networks with binary variables. These examples are completely made up and are used for illustration purpose only.
 start_date: 2019-09-05 00:00:00+00:00
 end_date: null
 competition_docker_image: ''
-image: logo.jpg
+image: logo.png
 has_registration: false
 force_submission_to_leaderboard: false
 disallow_leaderboard_modifying: true
@@ -45,7 +45,7 @@ leaderboard:
       rank: 3
       sort: desc
     auc_binary_3:
-      label: Causal Selection (AUC ROC)
+      label: Causal Inference (AUC ROC)
       leaderboard: *id001
       rank: 4
       sort: desc

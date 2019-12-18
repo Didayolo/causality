@@ -1,15 +1,20 @@
 <p>You can download on the Files signet:<br />- The <strong>public data</strong> in AutoML format. <br />- The <strong>starting kit</strong>, containing a example notebook to open the files, run baseline models and save the <strong>submission files</strong>. You can also find example of submission files in the starting kit (with random solution).</p>
-<p>The data samples have 11 attributes. The target to be predicted is whether the patient has lung cancer or not in experiments (coded as 0 or 1).</p>
+<p>The data samples have 16 attributes. The target to be predicted is whether the patient will have a heart attack or not (encoded as 0 or 1).</p>
 <p>The data you are provided with consists of the following files:</p>
 <ul>
-<li>lucas0_feat.name: Name of the 11 attributes (features).</li>
-<li>lucas0_label.name: Name of the label to be predicted (class).</li>
-<li>lucas0_train.data: Training data matrix (1000 lines x 11 columns)</li>
-<li>lucas0_train.solution: Training target values (1000 lines x 1 column)</li>
-<li>lucas0_test.data: Test data matrix (1000 lines x 11 columns)</li>
+<li>heart_attack_feat.name: Name of the 16 attributes (features).</li>
+<li>heart_attack_label.name: Name of the label to be predicted (class).</li>
+<li>heart_attack_train.data: Training data matrix (36000 lines x 16 columns)</li>
+<li>heart_attack_train.solution: Training target values (36000 lines x 16 column)</li>
+<li>heart_attack_test.data: Test data matrix (54000 lines x 16 columns)</li>
 </ul>
 <p>The files</p>
-<pre>- classification.solution: Test target values (1000 lines x 1 column)<br />- selection.solution: Solution on which variables are useful (11 lines x 1 column) <br />- causal.solution: Solution on which variables cause the target (11 lines x 1 column)</pre>
+<pre>- classification.solution: Test target values (54000 lines x 1 column)<br />
+- selection.solution: Solution on which variables are useful (16 lines x 1 column) <br />
+- causality.solution: Solution on what are the causal links between variables (17 lines x 17 column)</pre>
 <p>are omitted, this is what you have to predict.</p>
-<p>Your submission must be a .zip archive containing the following files:<br />- classification.csv, your predicted labels for test dataset. It should include plus or minus one values, one for each test sample, representing the class label predictions.<br />- selection.csv, representing the features you selected as real or fake.</p>
+<p>Your submission must be a .zip archive containing the following files:<br />
+- classification.csv, your predicted labels for test dataset. It should include plus or minus one values, one for each test sample, representing the class label predictions.<br />
+- selection.csv, representing the features you selected as real or fake.<br />
+- causality.csv, representing the causal links between variables.</p>
 <p>Zip it without directory structure and submit it to Submit/View results signet.</p>
