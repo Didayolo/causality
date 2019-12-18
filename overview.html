@@ -4,3 +4,53 @@
 <br /><br /><strong>Binary classification:</strong> Each data row is labeled (0) or (1). You have to train a predictive model on train dataset to be able to find as well as possible the labels of the test dataset.
 <br /><br /><strong>Feature selection:</strong> Among the 11 features. The goal of this problem is therefore to classify features between useless (0) and useful (1).
 <br /><br /><strong>Causal inference:</strong> Find the causal links between each variables.</p>
+
+Let's see an example:
+
+<img src="https://raw.githubusercontent.com/Didayolo/causality/master/scheme_causality.png">
+
+In this example, A and C variables cause B. D has no causal links with any variable.
+
+This can be represented by the following matrix:
+
+<table border="1" cellspacing="1" cellpadding="1">
+<tbody>
+<tr>
+<td>&nbsp;-&nbsp;</td>
+<td>&nbsp;A&nbsp;</td>
+<td>&nbsp;B&nbsp;</td>
+<td>&nbsp;C&nbsp;</td>
+<td>&nbsp;D&nbsp;</td>
+</tr>
+<tr>
+<td>A</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>B</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>C</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>D</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+
+The two arrows are represented by the 1 in the matrix.
