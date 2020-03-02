@@ -43,14 +43,12 @@ def _HERE(*args):
     return os.path.join(h, *args)
 
 
-def _load_scoring_function(n=1):
-    with open(_HERE('metric_'+str(n)+'.txt'), 'r') as f:
-        metric_name = f.readline().strip()
-        try:
-            score_func = getattr(libscores, metric_name)
-        except:
-            score_func = getattr(my_metric, metric_name)
-        return metric_name, score_func
+def _load_scoring_function(metric_name='auc_binary'):
+    try:
+        score_func = getattr(libscores, metric_name)
+    except:
+        score_func = getattr(my_metric, metric_name)
+    return score_func
 
 # =============================== MAIN ========================================
 if __name__ == "__main__":
@@ -77,9 +75,9 @@ if __name__ == "__main__":
     score_file = open(os.path.join(score_dir, 'scores.txt'), 'wb')
 
     # Get the metric
-    metric_name_1, scoring_function_1 = _load_scoring_function(1)
-    metric_name_2, scoring_function_2 = _load_scoring_function(2)
-    metric_name_3, scoring_function_3 = _load_scoring_function(3)
+    metric_name_1, scoring_function_1 = 'auc_classification', _load_scoring_function('auc_binary')
+    metric_name_2, scoring_function_2 = 'acc_selection', _load_scoring_function('accuracy')
+    metric_name_3, scoring_function_3 = 'acc_causality', _load_scoring_function('accuracy')
 
     # Get all the solution files from the solution directory
     solution_names = sorted(ls(os.path.join(solution_dir, '*.solution')))

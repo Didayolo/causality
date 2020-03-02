@@ -185,12 +185,6 @@ def bac_multilabel(solution, prediction):
 def auc_binary(solution, prediction):
     return auc_metric(solution, prediction, task='binary.classification')
 
-def auc_binary_2(solution, prediction):
-    return auc_metric(solution, prediction, task='binary.classification')
-
-def auc_binary_3(solution, prediction):
-    return auc_metric(solution, prediction, task='binary.classification')
-
 def auc_multilabel(solution, prediction):
     return auc_metric(solution, prediction, task='multilabel.classification')
 

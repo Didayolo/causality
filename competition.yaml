@@ -32,20 +32,20 @@ phases:
     starting_kit: starting_kit.zip
 leaderboard:
   columns:
-    auc_binary:
+    auc_classification:
       label: Classification (AUC ROC)
       leaderboard: &id001
         label: RESULTS
         rank: 1
       rank: 2
       sort: desc
-    auc_binary_2:
-      label: Feature Selection (AUC ROC)
+    acc_selection:
+      label: Feature Selection (accuracy)
       leaderboard: *id001
       rank: 3
       sort: desc
-    auc_binary_3:
-      label: Causal Inference (AUC ROC)
+    acc_causality:
+      label: Causal Inference (accuracy)
       leaderboard: *id001
       rank: 4
       sort: desc
@@ -56,6 +56,6 @@ leaderboard:
       sort: asc
       computed:
         operation: Avg
-        fields: auc_binary, auc_binary_2, auc_binary_3
+        fields: auc_classification, acc_selection, acc_causality
   leaderboards:
     RESULTS: *id001
