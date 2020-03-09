@@ -72,7 +72,7 @@ if __name__ == "__main__":
 
     # Create the output directory, if it does not already exist and open output files
     mkdir(score_dir)
-    score_file = open(os.path.join(score_dir, 'scores.txt'), 'wb')
+    score_file = open(os.path.join(score_dir, 'scores.txt'), 'w')
 
     # Get the metric
     metric_name_1, scoring_function_1 = 'auc_classification', _load_scoring_function('auc_binary')
@@ -122,7 +122,8 @@ if __name__ == "__main__":
 
             print("======= " + basename.capitalize() + ": score(" + metric_name + ")=%0.12f =======" % score)
             # Write score corresponding to selected task and metric to the output file
-            score_file.write(metric_name + ": %0.12f\n" % score) # classification
+            #score_file.write('{}: {}\n'.format(metric_name, score))
+            score_file.write(metric_name + ": %0.12f\n" % score)
 
             if debug_mode>0:
                 scores = compute_all_scores(solution, prediction)
