@@ -128,7 +128,7 @@ if __name__ == "__main__":
                 scores = compute_all_scores(solution, prediction)
 
         except Exception as e:
-            print e
+            print(e)
 
     # End loop for solution_file in solution_names
 

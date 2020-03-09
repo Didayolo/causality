@@ -32,7 +32,7 @@ from sklearn.preprocessing import *
 
 swrite = stderr.write
 from os import getcwd as pwd
-from pip import get_installed_distributions as lib
+#from pip import get_installed_distributions as lib
 from glob import glob
 import platform
 import psutil
@@ -119,10 +119,6 @@ def acc_stat(solution, prediction):
     FN = sum(np.multiply(solution, (1 - prediction)))
     TP = sum(np.multiply(solution, prediction))
     FP = sum(np.multiply((1 - solution), prediction))
-    # print "TN =",TN
-    # print "FP =",FP
-    # print "TP =",TP
-    # print "FN =",FN
     return (TN, FP, TP, FN)
 
 
@@ -561,8 +557,8 @@ def show_version(scoring_version):
     # Python version
     swrite("Python version: " + version + "\n\n")
     # Give information on the version installed
-    swrite("Versions of libraries installed:\n")
-    map(swrite, sorted(["%s==%s\n" % (i.key, i.version) for i in lib()]))
+    #swrite("Versions of libraries installed:\n")
+    #map(swrite, sorted(["%s==%s\n" % (i.key, i.version) for i in lib()]))
 
 
 def show_platform():

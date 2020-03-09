@@ -2,7 +2,7 @@ title: Heart Attack - Causality Challenge
 description: Synthetic data about heart attack generated artificially by causal Bayesian networks with binary variables. These examples are completely made up and are used for illustration purpose only.
 start_date: 2019-09-05 00:00:00+00:00
 end_date: null
-competition_docker_image: ''
+competition_docker_image: 'codalab/codalab-legacy:py37'
 image: logo.png
 has_registration: false
 force_submission_to_leaderboard: true
