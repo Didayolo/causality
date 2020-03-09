@@ -6,9 +6,9 @@ than one function, hence you must specify the name of the function that is your 
 
 import numpy as np
 import scipy as sp
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import balanced_accuracy_score
 
-def accuracy(solution, prediction):
+def balanced_accuracy(solution, prediction):
     '''
         Compute balanced accuracy.
         Average accuracy on every class.
@@ -17,4 +17,4 @@ def accuracy(solution, prediction):
     if len(solution.shape) == 2:
         solution = solution.flatten()
         prediction = prediction.flatten()
-    return accuracy_score(solution, prediction)
+    return balanced_accuracy_score(solution, prediction)

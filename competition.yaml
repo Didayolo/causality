@@ -39,13 +39,13 @@ leaderboard:
         rank: 1
       rank: 2
       sort: desc
-    acc_selection:
-      label: Feature Selection (accuracy)
+    bac_selection:
+      label: Feature Selection (balanced accuracy)
       leaderboard: *id001
       rank: 3
       sort: desc
-    acc_causality:
-      label: Causal Inference (accuracy)
+    bac_causality:
+      label: Causal Inference (balanced accuracy)
       leaderboard: *id001
       rank: 4
       sort: desc
@@ -56,6 +56,6 @@ leaderboard:
       sort: asc
       computed:
         operation: Avg
-        fields: auc_classification, acc_selection, acc_causality
+        fields: auc_classification, bac_selection, bac_causality
   leaderboards:
     RESULTS: *id001

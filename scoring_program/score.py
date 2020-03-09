@@ -76,8 +76,8 @@ if __name__ == "__main__":
 
     # Get the metric
     metric_name_1, scoring_function_1 = 'auc_classification', _load_scoring_function('auc_binary')
-    metric_name_2, scoring_function_2 = 'acc_selection', _load_scoring_function('accuracy')
-    metric_name_3, scoring_function_3 = 'acc_causality', _load_scoring_function('accuracy')
+    metric_name_2, scoring_function_2 = 'bac_selection', _load_scoring_function('balanced_accuracy')
+    metric_name_3, scoring_function_3 = 'bac_causality', _load_scoring_function('balanced_accuracy')
 
     # Get all the solution files from the solution directory
     solution_names = sorted(ls(os.path.join(solution_dir, '*.solution')))
