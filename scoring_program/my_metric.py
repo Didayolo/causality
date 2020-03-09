@@ -7,6 +7,7 @@ than one function, hence you must specify the name of the function that is your 
 import numpy as np
 import scipy as sp
 from sklearn.metrics import balanced_accuracy_score
+from sklearn.metrics import roc_auc_score
 
 def balanced_accuracy(solution, prediction):
     '''
@@ -18,3 +19,6 @@ def balanced_accuracy(solution, prediction):
         solution = solution.flatten()
         prediction = prediction.flatten()
     return balanced_accuracy_score(solution, prediction)
+
+def roc_auc(solution, prediction):
+    return roc_auc_score(solution, prediction)
