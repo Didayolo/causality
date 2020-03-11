@@ -22,8 +22,8 @@ phases:
     description: ''
     is_scoring_only: true
     label: Final
-    max_submissions: 100
-    max_submissions_per_day: 10
+    max_submissions: 200
+    max_submissions_per_day: 15
     phasenumber: 1
     public_data: public_data.zip
     reference_data: reference_data.zip
